@@ -1,0 +1,128 @@
+[
+  {
+    "step": 1,
+    "query": "Chào bạn, VinBus hiện có những loại vé tháng nào và ưu đãi ra sao?",
+    "action_type": "FINAL_ANSWER",
+    "thought": "Câu hỏi chung về dịch vụ VinBus, trả lời trực tiếp không cần gọi Tool.",
+    "output": "[Mock Agent Response]: Xin chào! VinBus hiện cung cấp vé lượt và vé tháng (Học sinh - Sinh viên, Người đi làm) trên các tuyến xe bus điện nội khu và kết nối trung tâm thành phố.",
+    "latency_ms": 0.58
+  },
+  {
+    "step": 1,
+    "query": "Hãy tra cứu thông tin lộ trình tuyến xe bus điện VB01.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "route_query",
+    "arguments": {
+      "route_id": "VB01"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "route_id": "VB01",
+      "data": {
+        "route_name": "Vinhomes Ocean Park - Long Biên",
+        "start_point": "Vinhomes Ocean Park",
+        "end_point": "Bến xe Long Biên",
+        "operating_hours": "05:30 - 22:00",
+        "frequency_minutes": 15,
+        "price_single": 8000,
+        "price_monthly": 200000
+      }
+    },
+    "latency_ms": 0.55
+  },
+  {
+    "step": 2,
+    "query": "Hãy tra cứu thông tin lộ trình tuyến xe bus điện VB01.",
+    "action_type": "FINAL_ANSWER",
+    "thought": "Tổng hợp kết quả từ MCP Server thành công.",
+    "output": "Thông tin lộ trình tuyến VB01 (Vinhomes Ocean Park - Long Biên): Từ Vinhomes Ocean Park đến Bến xe Long Biên, Giờ hoạt động: 05:30 - 22:00, Giá vé tháng: 200000 VNĐ.",
+    "latency_ms": 10.0
+  },
+  {
+    "step": 1,
+    "query": "Tôi muốn đăng ký vé tháng loại Học sinh - Sinh viên cho khách hàng KH2026001 trên tuyến VB01.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "register_monthly_ticket",
+    "arguments": {
+      "customer_id": "KH2026001",
+      "route_id": "VB01",
+      "ticket_type": "Học sinh - Sinh viên"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "booking_id": "TICKET-KH2026001-VB01",
+      "customer_id": "KH2026001",
+      "route_id": "VB01",
+      "ticket_type": "Học sinh - Sinh viên",
+      "message": "Đăng ký vé tháng thành công cho khách hàng KH2026001 trên tuyến VB01 (Loại vé: Học sinh - Sinh viên)."
+    },
+    "latency_ms": 0.31
+  },
+  {
+    "step": 2,
+    "query": "Tôi muốn đăng ký vé tháng loại Học sinh - Sinh viên cho khách hàng KH2026001 trên tuyến VB01.",
+    "action_type": "FINAL_ANSWER",
+    "thought": "Tổng hợp kết quả từ MCP Server thành công.",
+    "output": "Đăng ký vé tháng thành công cho khách hàng KH2026001 trên tuyến VB01 (Loại vé: Học sinh - Sinh viên).",
+    "latency_ms": 10.0
+  },
+  {
+    "step": 1,
+    "query": "Trước khi đăng ký vé tháng cho khách hàng KH2026002, hãy tra cứu lộ trình tuyến VB02 xem giá vé tháng bao nhiêu, sau đó tiến hành đăng ký.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "register_monthly_ticket",
+    "arguments": {
+      "customer_id": "KH2026001",
+      "route_id": "VB01",
+      "ticket_type": "Học sinh - Sinh viên"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "booking_id": "TICKET-KH2026001-VB01",
+      "customer_id": "KH2026001",
+      "route_id": "VB01",
+      "ticket_type": "Học sinh - Sinh viên",
+      "message": "Đăng ký vé tháng thành công cho khách hàng KH2026001 trên tuyến VB01 (Loại vé: Học sinh - Sinh viên)."
+    },
+    "latency_ms": 0.36
+  },
+  {
+    "step": 2,
+    "query": "Trước khi đăng ký vé tháng cho khách hàng KH2026002, hãy tra cứu lộ trình tuyến VB02 xem giá vé tháng bao nhiêu, sau đó tiến hành đăng ký.",
+    "action_type": "FINAL_ANSWER",
+    "thought": "Tổng hợp kết quả từ MCP Server thành công.",
+    "output": "Đăng ký vé tháng thành công cho khách hàng KH2026001 trên tuyến VB01 (Loại vé: Học sinh - Sinh viên).",
+    "latency_ms": 10.0
+  },
+  {
+    "step": 1,
+    "query": "Hãy tra cứu thông tin lộ trình tuyến VB99.",
+    "action_type": "TOOL_EXECUTION",
+    "tool_name": "route_query",
+    "arguments": {
+      "route_id": "VB01"
+    },
+    "observation": {
+      "status": "SUCCESS",
+      "route_id": "VB01",
+      "data": {
+        "route_name": "Vinhomes Ocean Park - Long Biên",
+        "start_point": "Vinhomes Ocean Park",
+        "end_point": "Bến xe Long Biên",
+        "operating_hours": "05:30 - 22:00",
+        "frequency_minutes": 15,
+        "price_single": 8000,
+        "price_monthly": 200000
+      }
+    },
+    "latency_ms": 0.28
+  },
+  {
+    "step": 2,
+    "query": "Hãy tra cứu thông tin lộ trình tuyến VB99.",
+    "action_type": "FINAL_ANSWER",
+    "thought": "Tổng hợp kết quả từ MCP Server thành công.",
+    "output": "Thông tin lộ trình tuyến VB01 (Vinhomes Ocean Park - Long Biên): Từ Vinhomes Ocean Park đến Bến xe Long Biên, Giờ hoạt động: 05:30 - 22:00, Giá vé tháng: 200000 VNĐ.",
+    "latency_ms": 10.0
+  }
+]

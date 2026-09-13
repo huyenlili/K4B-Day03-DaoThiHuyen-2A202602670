@@ -1,29 +1,10 @@
 [
   {
     "step": 1,
-    "query": "Chào bạn, bạn có thể giới thiệu quy chế học vụ cơ bản của Đại học VinUni không?",
+    "query": "VinBus có những loại vé nào",
     "action_type": "FINAL_ANSWER",
-    "thought": "Câu hỏi chung về quy chế học vụ, trả lời trực tiếp không cần gọi Tool.",
-    "output": "[Mock Agent Response]: Xin chào! Quy chế học vụ VinUni yêu cầu sinh viên tích lũy tối thiểu 120 tín chỉ và duy trì GPA trên 2.0 để tốt nghiệp.",
-    "latency_ms": 2845.93
-  },
-  {
-    "step": 1,
-    "query": "Hãy tra cứu thông tin học vụ của sinh viên SV2026001.",
-    "action_type": "TOOL_EXECUTION",
-    "tool_name": "academic_query",
-    "arguments": {
-      "student_id": "SV2026001"
-    },
-    "observation": {},
-    "latency_ms": 799.12
-  },
-  {
-    "step": 2,
-    "query": "Hãy tra cứu thông tin học vụ của sinh viên SV2026001.",
-    "action_type": "FINAL_ANSWER",
-    "thought": "Tổng hợp kết quả từ MCP Server thành công.",
-    "output": "Chưa thể trả lời chi tiết do chưa nhận được dữ liệu từ MCP Server (hãy hoàn thành TODO 2.1).",
-    "latency_ms": 10.0
+    "thought": "Gemini phản hồi trực tiếp bằng văn bản (không cần gọi công cụ).",
+    "output": "Hiện nay, dịch vụ xe bus điện **VinBus** áp dụng các loại vé cơ bản sau:\n\n1. **Vé lượt:** \n   - Dành cho hành khách di chuyển từng chuyến lẻ.\n   - Giá vé thường giao động từ **7.000 VNĐ - 9.000 VNĐ/lượt** (tùy theo từng tuyến đường và tỉnh/thành phố áp dụng).\n\n2. **Vé tháng:**\n   - **Vé tháng đơn tuyến:** Dành cho khách hàng di chuyển thường xuyên trên một tuyến xe bus cố định.\n   - **Vé tháng liên tuyến:** Dành cho khách hàng có nhu cầu di chuyển trên tất cả các tuyến VinBus (hoặc mạng lưới xe bus công cộng kết nối).\n   - *Đối tượng ưu tiên:* Có chính sách ưu đãi giá vé tháng dành riêng cho **Học sinh - Sinh viên**, **Người cao tuổi**, **Người công nhân/Người đi làm**...\n\n3. **Vé miễn phí:**\n   - Áp dụng cho các đối tượng chính sách/ưu tiên theo quy định của pháp luật và thành phố (như người cao tuổi trên 60 tuổi, người có công, người khuyết tật, trẻ em dưới 6 tuổi/cao dưới 1m2 tùy khu vực).\n\nNếu bạn cần tra cứu cụ thể lộ trình tuyến hoặc muốn **đăng ký vé tháng**, bạn có thể cung cấp **Mã tuyến** (ví dụ: *E01, E02, E03...*) hoặc **Mã khách hàng** để em hỗ trợ nhé!",
+    "latency_ms": 5411.74
   }
 ]

@@ -114,6 +114,7 @@ def run_react_agent(user_query: str, provider, mcp_server: MCPVinBusServer) -> l
                 "latency_ms": latency_ms
             })
             break
+
         # Trường hợp 2: LLM đề xuất gọi Tool (Action)
         elif llm_response.get("type") == "tool_call":
             tool_name = llm_response.get("tool_name")
